@@ -8,8 +8,33 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  
+  /* Primary Colors */
+  --color-primary: #013359;
+  --color-primary-red: #F12B3E;
+  --color-primary-cyan: #4DD4F5;
+  --color-primary-blue: #0082A9;
+  
+  /* Accent Colors */
+  --color-accent-orange: #FF8648;
+  --color-accent-orange-light: #FFEADF;
+  --color-accent-orange-dark: #FFD2BB;
+  
+  /* Text Colors */
+  --color-text-strong: #011829;
+  --color-text-sub: #4B5D6B;
+  --color-text-soft: #B9BAC3;
+  --color-text-disabled: #D1D1D7;
+  
+  /* Background Colors */
+  --color-bg-soft: #F1F1F1;
+  --color-bg-white: #FFFFFF;
+  
+  /* Stroke Colors */
+  --color-stroke-soft: #E7E8EB;
+  --color-stroke-sub: #D1D1D7;
 }
 
 @media (prefers-color-scheme: dark) {
