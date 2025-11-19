@@ -51,75 +51,88 @@ export default function CentersSection() {
         </p>
       </div>
 
-      {/* Map Section */}
-      <div className="relative w-full h-[500px] md:h-[700px] lg:h-[880px]">
-        {/* Map Background */}
+      {/* Map Section - Desktop Only */}
+      <div className="hidden lg:block relative w-full h-[600px] mb-12">
         <Image
           src="/home/centers/image.png"
           alt="Saudi Arabia Map"
           fill
           className="object-cover"
         />
+        
+        {/* Map Pins */}
+        {centers.map((center) => (
+          <button
+            key={center.id}
+            onClick={() => setSelectedCenter(center.id)}
+            className="absolute w-10 h-10 -translate-x-1/2 -translate-y-full hover:scale-110 transition-transform z-10"
+            style={{ left: center.position.left, top: center.position.top }}
+          >
+            <MapPin className="w-full h-full text-primary-red fill-primary-red drop-shadow-lg" />
+          </button>
+        ))}
+      </div>
 
-        {/* Map Pins - Hidden on mobile for better UX */}
-        <div className="hidden md:block">
-          {centers.map((center) => (
-            <button
-              key={center.id}
-              onClick={() => setSelectedCenter(center.id)}
-              className="absolute w-8 h-8 md:w-10 md:h-10 -translate-x-1/2 -translate-y-full hover:scale-110 transition-transform"
-              style={{ left: center.position.left, top: center.position.top }}
-            >
-              <MapPin className="w-full h-full text-primary-red fill-primary-red" />
-            </button>
-          ))}
-        </div>
-
-        {/* Center Cards */}
-        <div className="absolute bottom-4 md:bottom-12 lg:bottom-24 left-0 md:left-12 lg:left-24 right-0 md:right-12 lg:right-24 overflow-x-auto scrollbar-hide">
-          <div className="flex gap-4 md:gap-6 px-4 md:px-0 pb-4 md:pb-0" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-          {centers.map((center) => (
-            <div
-              key={center.id}
-              className={`shrink-0 w-[280px] sm:w-[340px] md:w-auto md:flex-1 md:max-w-[561px] bg-white border border-stroke-soft p-2 flex flex-col sm:flex-row gap-3 md:gap-5 transition-all ${
-                selectedCenter === center.id ? 'ring-2 ring-primary-blue' : ''
-              }`}
-            >
-              <div className="relative w-full sm:w-[140px] md:w-[187px] h-[160px] sm:h-[180px] md:h-[199px] shrink-0">
-                <Image
-                  src={center.image}
-                  alt={center.name}
-                  fill
-                  className="object-cover bg-gray-200"
-                />
-              </div>
-              
-              <div className="flex-1 py-2 md:py-4 flex flex-col gap-3 md:gap-4">
-                <h3 className="text-lg sm:text-xl md:text-[26px] font-bold text-text-strong">{center.name}</h3>
-                
-                <div className="flex flex-col gap-2">
-                  <div className="flex items-start gap-2">
-                    <MapPin className="w-4 h-4 md:w-5 md:h-5 text-[#5D5E74] shrink-0 mt-0.5" />
-                    <div className="text-xs sm:text-sm text-[#5D5E74] leading-tight">
-                      {center.address}<br />{center.city}
-                    </div>
-                  </div>
-                  
-                  <a
-                    href={`tel:${center.phone}`}
-                    className="flex items-center gap-2 text-xs sm:text-sm text-[#5D5E74] underline hover:text-primary-blue transition-colors"
-                  >
-                    <Phone className="w-4 h-4 md:w-5 md:h-5" />
-                    {center.phone}
-                  </a>
+      {/* Center Cards Section */}
+      <div className="w-full px-4 md:px-12 lg:px-24 pb-12 md:pb-20 lg:pb-28">
+        <div className="overflow-x-auto scrollbar-hide -mx-4 md:mx-0">
+          <div className="flex lg:grid lg:grid-cols-3 gap-4 md:gap-6 px-4 md:px-0 min-w-min">
+            {centers.map((center) => (
+              <div
+                key={center.id}
+                onClick={() => setSelectedCenter(center.id)}
+                className={`shrink-0 w-[280px] sm:w-[320px] lg:w-auto bg-white rounded-lg border-2 transition-all cursor-pointer hover:shadow-lg ${
+                  selectedCenter === center.id 
+                    ? 'border-primary-blue shadow-lg' 
+                    : 'border-stroke-soft'
+                }`}
+              >
+                {/* Image */}
+                <div className="relative w-full h-[180px] lg:h-[220px]">
+                  <Image
+                    src={center.image}
+                    alt={center.name}
+                    fill
+                    className="object-cover rounded-t-lg"
+                  />
                 </div>
+                
+                {/* Content */}
+                <div className="p-4 md:p-5 flex flex-col gap-3">
+                  <h3 className="text-xl md:text-2xl font-bold text-text-strong">
+                    {center.name}
+                  </h3>
+                  
+                  <div className="flex flex-col gap-2.5">
+                    <div className="flex items-start gap-2">
+                      <MapPin className="w-5 h-5 text-primary-blue shrink-0 mt-0.5" />
+                      <div className="text-sm text-text-sub leading-snug">
+                        {center.address}<br />{center.city}
+                      </div>
+                    </div>
+                    
+                    <a
+                      href={`tel:${center.phone}`}
+                      className="flex items-center gap-2 text-sm text-primary-blue font-semibold hover:underline transition-colors"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <Phone className="w-5 h-5" />
+                      {center.phone}
+                    </a>
+                  </div>
 
-                <button className="px-4 md:px-6 py-2 border border-black/50 rounded text-xs sm:text-sm font-bold text-text-strong hover:bg-black/5 transition-colors">
-                  Book Visit
-                </button>
+                  <button 
+                    className="w-full mt-2 px-6 py-2.5 bg-primary text-white rounded-lg text-sm font-bold hover:bg-primary/90 transition-colors"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      console.log('Book visit for:', center.name);
+                    }}
+                  >
+                    Book Visit
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
           </div>
         </div>
       </div>
