@@ -27,7 +27,7 @@ export default function WhyChooseSection() {
       {/* Left: Image */}
       <div className="flex-1 relative bg-bg-soft min-h-[300px] lg:min-h-0">
         <Image
-          src="https://placehold.co/802x1202"
+          src="/online-courses/online.png"
           alt="Online Learning"
           fill
           className="object-cover"
