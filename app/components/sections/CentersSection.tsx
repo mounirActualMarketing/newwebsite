@@ -51,8 +51,9 @@ export default function CentersSection() {
         </p>
       </div>
 
-      {/* Map Section - Desktop Only */}
-      <div className="hidden lg:block relative w-full h-[600px] mb-12">
+      {/* Map Section with Overlaying Cards */}
+      <div className="relative w-full h-[600px] md:h-[700px] lg:h-[800px]">
+        {/* Map Background */}
         <Image
           src="/home/centers/image.png"
           alt="Saudi Arabia Map"
@@ -60,46 +61,109 @@ export default function CentersSection() {
           className="object-cover"
         />
         
-        {/* Map Pins */}
-        {centers.map((center) => (
-          <button
-            key={center.id}
-            onClick={() => setSelectedCenter(center.id)}
-            className="absolute w-10 h-10 -translate-x-1/2 -translate-y-full hover:scale-110 transition-transform z-10"
-            style={{ left: center.position.left, top: center.position.top }}
-          >
-            <MapPin className="w-full h-full text-primary-red fill-primary-red drop-shadow-lg" />
-          </button>
-        ))}
-      </div>
+        {/* Map Pins - Desktop Only */}
+        <div className="hidden lg:block">
+          {centers.map((center) => (
+            <button
+              key={center.id}
+              onClick={() => setSelectedCenter(center.id)}
+              className="absolute w-10 h-10 -translate-x-1/2 -translate-y-full hover:scale-110 transition-transform z-10"
+              style={{ left: center.position.left, top: center.position.top }}
+            >
+              <MapPin className="w-full h-full text-primary-red fill-primary-red drop-shadow-lg" />
+            </button>
+          ))}
+        </div>
 
-      {/* Center Cards Section */}
-      <div className="w-full px-4 md:px-12 lg:px-24 pb-12 md:pb-20 lg:pb-28">
-        <div className="overflow-x-auto scrollbar-hide -mx-4 md:mx-0">
-          <div className="flex lg:grid lg:grid-cols-3 gap-4 md:gap-6 px-4 md:px-0 min-w-min">
+        {/* Overlay Cards - Bottom 30% on Mobile, Grid on Desktop */}
+        <div className="absolute bottom-0 left-0 right-0 lg:bottom-12 lg:left-24 lg:right-24">
+          {/* Mobile/Tablet: Horizontal Scroll */}
+          <div className="lg:hidden overflow-x-auto scrollbar-hide px-4 pb-6">
+            <div className="flex gap-4 min-w-min">
+              {centers.map((center) => (
+                <div
+                  key={center.id}
+                  onClick={() => setSelectedCenter(center.id)}
+                  className={`shrink-0 w-[280px] sm:w-[320px] bg-white rounded-xl shadow-xl border-2 transition-all cursor-pointer hover:shadow-2xl ${
+                    selectedCenter === center.id 
+                      ? 'border-primary-blue shadow-2xl' 
+                      : 'border-white'
+                  }`}
+                >
+                  {/* Image */}
+                  <div className="relative w-full h-[160px]">
+                    <Image
+                      src={center.image}
+                      alt={center.name}
+                      fill
+                      className="object-cover rounded-t-xl"
+                    />
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="p-4 flex flex-col gap-2.5 bg-white rounded-b-xl">
+                    <h3 className="text-lg font-bold text-text-strong">
+                      {center.name}
+                    </h3>
+                    
+                    <div className="flex flex-col gap-2">
+                      <div className="flex items-start gap-2">
+                        <MapPin className="w-4 h-4 text-primary-blue shrink-0 mt-0.5" />
+                        <div className="text-xs text-text-sub leading-snug">
+                          {center.address}<br />{center.city}
+                        </div>
+                      </div>
+                      
+                      <a
+                        href={`tel:${center.phone}`}
+                        className="flex items-center gap-2 text-xs text-primary-blue font-semibold hover:underline transition-colors"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <Phone className="w-4 h-4" />
+                        {center.phone}
+                      </a>
+                    </div>
+
+                    <button 
+                      className="w-full mt-2 px-4 py-2 bg-primary text-white rounded-lg text-xs font-bold hover:bg-primary/90 transition-colors"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        console.log('Book visit for:', center.name);
+                      }}
+                    >
+                      Book Visit
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Desktop: Grid Layout */}
+          <div className="hidden lg:grid lg:grid-cols-3 gap-6">
             {centers.map((center) => (
               <div
                 key={center.id}
                 onClick={() => setSelectedCenter(center.id)}
-                className={`shrink-0 w-[280px] sm:w-[320px] lg:w-auto bg-white rounded-lg border-2 transition-all cursor-pointer hover:shadow-lg ${
+                className={`bg-white rounded-xl shadow-xl border-2 transition-all cursor-pointer hover:shadow-2xl ${
                   selectedCenter === center.id 
-                    ? 'border-primary-blue shadow-lg' 
-                    : 'border-stroke-soft'
+                    ? 'border-primary-blue shadow-2xl' 
+                    : 'border-white'
                 }`}
               >
                 {/* Image */}
-                <div className="relative w-full h-[180px] lg:h-[220px]">
+                <div className="relative w-full h-[200px]">
                   <Image
                     src={center.image}
                     alt={center.name}
                     fill
-                    className="object-cover rounded-t-lg"
+                    className="object-cover rounded-t-xl"
                   />
                 </div>
                 
                 {/* Content */}
-                <div className="p-4 md:p-5 flex flex-col gap-3">
-                  <h3 className="text-xl md:text-2xl font-bold text-text-strong">
+                <div className="p-5 flex flex-col gap-3 bg-white rounded-b-xl">
+                  <h3 className="text-2xl font-bold text-text-strong">
                     {center.name}
                   </h3>
                   
