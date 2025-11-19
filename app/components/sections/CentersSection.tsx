@@ -61,61 +61,66 @@ export default function CentersSection() {
           className="object-cover"
         />
 
-        {/* Map Pins */}
-        {centers.map((center) => (
-          <button
-            key={center.id}
-            onClick={() => setSelectedCenter(center.id)}
-            className="absolute w-8 h-8 md:w-10 md:h-10 -translate-x-1/2 -translate-y-full hover:scale-110 transition-transform"
-            style={{ left: center.position.left, top: center.position.top }}
-          >
-            <MapPin className="w-full h-full text-primary-red fill-primary-red" />
-          </button>
-        ))}
+        {/* Map Pins - Hidden on mobile for better UX */}
+        <div className="hidden md:block">
+          {centers.map((center) => (
+            <button
+              key={center.id}
+              onClick={() => setSelectedCenter(center.id)}
+              className="absolute w-8 h-8 md:w-10 md:h-10 -translate-x-1/2 -translate-y-full hover:scale-110 transition-transform"
+              style={{ left: center.position.left, top: center.position.top }}
+            >
+              <MapPin className="w-full h-full text-primary-red fill-primary-red" />
+            </button>
+          ))}
+        </div>
 
         {/* Center Cards */}
-        <div className="absolute bottom-24 left-24 right-24 flex gap-6">
+        <div className="absolute bottom-4 md:bottom-12 lg:bottom-24 left-0 md:left-12 lg:left-24 right-0 md:right-12 lg:right-24 overflow-x-auto scrollbar-hide">
+          <div className="flex gap-4 md:gap-6 px-4 md:px-0 pb-4 md:pb-0" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
           {centers.map((center) => (
             <div
               key={center.id}
-              className={`flex-1 max-w-[561px] bg-white border border-stroke-soft p-2 flex gap-5 transition-all ${
+              className={`shrink-0 w-[280px] sm:w-[340px] md:w-auto md:flex-1 md:max-w-[561px] bg-white border border-stroke-soft p-2 flex flex-col sm:flex-row gap-3 md:gap-5 transition-all ${
                 selectedCenter === center.id ? 'ring-2 ring-primary-blue' : ''
               }`}
             >
-              <Image
-                src={center.image}
-                alt={center.name}
-                width={187}
-                height={199}
-                className="object-cover bg-gray-200"
-              />
+              <div className="relative w-full sm:w-[140px] md:w-[187px] h-[160px] sm:h-[180px] md:h-[199px] shrink-0">
+                <Image
+                  src={center.image}
+                  alt={center.name}
+                  fill
+                  className="object-cover bg-gray-200"
+                />
+              </div>
               
-              <div className="flex-1 py-4 flex flex-col gap-4">
-                <h3 className="text-[26px] font-bold text-text-strong">{center.name}</h3>
+              <div className="flex-1 py-2 md:py-4 flex flex-col gap-3 md:gap-4">
+                <h3 className="text-lg sm:text-xl md:text-[26px] font-bold text-text-strong">{center.name}</h3>
                 
                 <div className="flex flex-col gap-2">
                   <div className="flex items-start gap-2">
-                    <MapPin className="w-5 h-5 text-[#5D5E74] flex-shrink-0 mt-0.5" />
-                    <div className="text-sm text-[#5D5E74] leading-tight">
+                    <MapPin className="w-4 h-4 md:w-5 md:h-5 text-[#5D5E74] shrink-0 mt-0.5" />
+                    <div className="text-xs sm:text-sm text-[#5D5E74] leading-tight">
                       {center.address}<br />{center.city}
                     </div>
                   </div>
                   
                   <a
                     href={`tel:${center.phone}`}
-                    className="flex items-center gap-2 text-sm text-[#5D5E74] underline hover:text-primary-blue transition-colors"
+                    className="flex items-center gap-2 text-xs sm:text-sm text-[#5D5E74] underline hover:text-primary-blue transition-colors"
                   >
-                    <Phone className="w-5 h-5" />
+                    <Phone className="w-4 h-4 md:w-5 md:h-5" />
                     {center.phone}
                   </a>
                 </div>
 
-                <button className="px-6 py-2 border border-black/50 rounded text-sm font-bold text-text-strong hover:bg-black/5 transition-colors">
+                <button className="px-4 md:px-6 py-2 border border-black/50 rounded text-xs sm:text-sm font-bold text-text-strong hover:bg-black/5 transition-colors">
                   Book Visit
                 </button>
               </div>
             </div>
           ))}
+          </div>
         </div>
       </div>
     </div>
