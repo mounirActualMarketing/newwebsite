@@ -31,7 +31,7 @@ export default function MainNav() {
     },
     {
       label: 'Centers',
-      href: '#centers',
+      href: '/centers',
     },
     {
       label: 'About Us',
