@@ -22,7 +22,7 @@ export default function MainNav() {
         { label: 'Adult English', href: '#courses' },
         { label: 'Business English', href: '#courses' },
         { label: 'IELTS Preparation', href: '#courses' },
-        { label: 'Online Courses', href: '#courses' },
+        { label: 'Online Courses', href: '/online-courses' },
       ],
     },
     {
