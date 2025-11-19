@@ -34,6 +34,10 @@ export default function MainNav() {
       href: '#centers',
     },
     {
+      label: 'About Us',
+      href: '/about-us',
+    },
+    {
       label: 'Resources',
       items: [
         { label: 'Blog', href: '#blog' },
