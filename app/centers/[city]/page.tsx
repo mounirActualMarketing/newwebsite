@@ -91,13 +91,14 @@ const cityData: Record<string, {
 };
 
 interface CityPageProps {
-  params: {
+  params: Promise<{
     city: string;
-  };
+  }>;
 }
 
-export default function CityPage({ params }: CityPageProps) {
-  const citySlug = params.city.toLowerCase();
+export default async function CityPage({ params }: CityPageProps) {
+  const { city: cityParam } = await params;
+  const citySlug = cityParam.toLowerCase();
   const city = cityData[citySlug] || cityData.riyadh; // Default to Riyadh if city not found
 
   return (
