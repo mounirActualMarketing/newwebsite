@@ -16,15 +16,16 @@ export default function MainNav() {
         { label: 'Success Stories', href: '#testimonials' },
       ],
     },
-    {
-      label: 'English Courses',
-      items: [
-        { label: 'Adult English', href: '#courses' },
-        { label: 'Business English', href: '#courses' },
-        { label: 'IELTS Preparation', href: '#courses' },
-        { label: 'Online Courses', href: '/online-courses' },
-      ],
-    },
+  {
+    label: 'English Courses',
+    items: [
+      { label: 'Adult English', href: '#courses' },
+      { label: 'Business English', href: '#courses' },
+      { label: 'IELTS Preparation', href: '#courses' },
+      { label: 'English for Teens', href: '/english-teens' },
+      { label: 'Online Courses', href: '/online-courses' },
+    ],
+  },
     {
       label: 'Corporate',
       href: '#corporate',
