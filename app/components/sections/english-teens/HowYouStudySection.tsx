@@ -98,7 +98,7 @@ export default function HowYouStudySection() {
               <p className="text-text-strong opacity-70 text-sm">
                 Get expert guidance from native teachers and personal coaches.
               </p>
-              <Button variant="primary" size="small" className="self-start">
+              <Button variant="primary" className="self-start">
                 Start Learning
               </Button>
             </div>
