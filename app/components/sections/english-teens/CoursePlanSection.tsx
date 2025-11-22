@@ -11,7 +11,7 @@ export default function CoursePlanSection() {
         <div className="relative w-full md:w-[716px] h-[400px] md:h-[789px] overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/online-corporate/rightsec.png"
+              src="/online-corporate/leftsec.png"
               alt="Course Planning"
               fill
               className="object-cover -ml-42"

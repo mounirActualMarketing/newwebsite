@@ -20,7 +20,7 @@ export default function MainNav() {
     label: 'English Courses',
     items: [
       { label: 'Adult English', href: '#courses' },
-      { label: 'Business English', href: '#courses' },
+      { label: 'Business English', href: '/business-english' },
       { label: 'IELTS Preparation', href: '#courses' },
       { label: 'English for Teens', href: '/english-teens' },
       { label: 'Online Courses', href: '/online-courses' },
@@ -28,7 +28,7 @@ export default function MainNav() {
   },
   {
     label: 'Corporate',
-    href: '/corporate',
+    href: '/online-corporate',
   },
     {
       label: 'Centers',

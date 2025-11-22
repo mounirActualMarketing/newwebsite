@@ -25,7 +25,7 @@ export default function HowYouStudySection() {
           {/* Background Image */}
           <div className="absolute inset-0 -left-9">
             <Image
-              src="https://placehold.co/1104x736"
+              src="/online-corporate/sec1.png"
               alt="Corporate English Course"
               fill
               className="object-cover"
