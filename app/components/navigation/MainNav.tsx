@@ -26,10 +26,10 @@ export default function MainNav() {
       { label: 'Online Courses', href: '/online-courses' },
     ],
   },
-    {
-      label: 'Corporate',
-      href: '#corporate',
-    },
+  {
+    label: 'Corporate',
+    href: '/corporate',
+  },
     {
       label: 'Centers',
       href: '/centers',

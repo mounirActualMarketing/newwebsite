@@ -31,7 +31,7 @@ export default function MethodologySection() {
       {/* Image Side */}
       <div className="w-full lg:w-1/2 h-[400px] lg:h-[738px] relative bg-bg-soft overflow-hidden">
         <Image
-          src="https://placehold.co/1107x738"
+          src="/about/vid1.png"
           alt="Our Methodology"
           fill
           className="object-cover"

@@ -7,15 +7,15 @@ import { ArrowRight } from 'lucide-react';
 const awards = [
   {
     title: 'Wall Street English wins Education Provider of the year 2024',
-    image: 'https://placehold.co/450x482',
+    image: '/about/cul3.png',
   },
   {
     title: 'Excellence in Language Education Award 2023',
-    image: 'https://placehold.co/450x482',
+    image: '/about/cul3.png',
   },
   {
     title: 'Best Learning Innovation Award 2022',
-    image: 'https://placehold.co/450x482',
+    image: '/about/cul3.png',
   },
 ];
 
@@ -101,7 +101,7 @@ export default function TrustSection() {
               {/* ISO Logo */}
               <div className="absolute right-3 top-3 w-[280px] md:w-[348px] h-[280px] md:h-[348px]">
                 <Image
-                  src="https://placehold.co/348x348"
+                  src="/about/iso.png"
                   alt="ISO Certification"
                   fill
                   className="object-contain"
@@ -149,7 +149,7 @@ export default function TrustSection() {
           </p>
           <div className="relative w-full h-[300px] md:h-[500px] lg:h-[702px]">
             <Image
-              src="https://placehold.co/1248x702"
+              src="/about/brands.png"
               alt="Partner Companies"
               fill
               className="object-contain"

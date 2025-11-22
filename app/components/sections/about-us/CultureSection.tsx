@@ -7,10 +7,10 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const tabs = ['Cultural Events', 'Students activity', 'Our Centres Ambience'];
 
 const images = [
-  'https://placehold.co/746x506',
-  'https://placehold.co/746x506',
-  'https://placehold.co/746x506',
-  'https://placehold.co/746x506',
+  '/about/cul1.png',
+  '/about/cul1.png',
+  '/about/cul1.png',
+  '/about/cul1.png',
 ];
 
 export default function CultureSection() {

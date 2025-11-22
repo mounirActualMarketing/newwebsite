@@ -7,13 +7,13 @@ const topTeamMembers = [
     name: 'Ahmed Al-Qahtani',
     role: 'Senior English Instructor',
     description: 'Known for his energy and empathy in the classroom, Ahmed helps learners overcome fear and start speaking English with confidence — fast.',
-    image: 'https://placehold.co/309x300',
+    image: '/about/tess1.png',
   },
   {
     name: 'Reem Al-Mutairi',
     role: 'Student Support Advisor',
     description: 'Reem guides students through their learning plans and assessments, making sure they stay on track, motivated, and supported every step of the way.',
-    image: 'https://placehold.co/309x300',
+    image: '/about/tes2.png',
   },
 ];
 
@@ -22,25 +22,25 @@ const bottomTeamMembers = [
     name: 'Yasir Al-Jabari',
     role: 'Language Assessment Coordinator',
     description: 'Yasir oversees the assessment processes for English proficiency, ensuring fairness and accuracy while providing feedback to help students improve.',
-    image: 'https://placehold.co/288x300',
+    image: '/about/tess3.png',
   },
   {
     name: 'Khaled Al-Zahrani',
     role: 'Cultural Exchange Coordinator',
     description: 'Khaled facilitates cultural exchange programs that immerse students in real-life English-speaking environments, enhancing their language and cultural awareness.',
-    image: 'https://placehold.co/288x300',
+    image: '/about/tes4.png',
   },
   {
     name: 'Omar Al-Hassan',
     role: 'ESL Instructor',
     description: 'Omar specializes in teaching English as a second language, utilizing innovative methods to engage students and enhance their linguistic skills.',
-    image: 'https://placehold.co/288x300',
+    image: '/about/tes5.png',
   },
   {
     name: 'Tariq Al-Nasser',
     role: 'Technology Integration Specialist',
     description: 'Tariq incorporates digital tools and resources into English language teaching, enhancing the learning experience through technology-driven methodologies.',
-    image: 'https://placehold.co/288x300',
+    image: '/about/tes6.png',
   },
 ];
 

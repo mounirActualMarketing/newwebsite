@@ -67,7 +67,7 @@ export default function ValuesSection() {
         <div className="relative w-full h-[600px] md:h-[730px] rounded overflow-hidden">
           {/* Background Image */}
           <Image
-            src="https://placehold.co/1284x856"
+            src="/about/ab1.png"
             alt="Our Values Background"
             fill
             className="object-cover"

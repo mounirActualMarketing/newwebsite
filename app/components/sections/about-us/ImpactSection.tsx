@@ -10,7 +10,7 @@ export default function ImpactSection() {
         {/* Testimonial Image */}
         <div className="w-full lg:w-[600px] h-[500px] md:h-[600px] lg:h-[679px] relative rounded-2xl overflow-hidden shrink-0">
           <Image
-            src="https://placehold.co/629x692"
+            src="/about/impact.png"
             alt="Student Testimonial"
             fill
             className="object-cover"

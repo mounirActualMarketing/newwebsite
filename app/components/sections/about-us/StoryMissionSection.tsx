@@ -24,7 +24,7 @@ export default function StoryMissionSection() {
           {/* Center Large Image */}
           <div className="absolute left-1/2 top-[46px] -translate-x-1/2 w-[280px] h-[280px] md:w-[438px] md:h-[438px] rounded">
             <Image
-              src="https://placehold.co/438x438"
+              src="/about/1.png"
               alt="Main story"
               fill
               className="object-cover rounded"
@@ -34,7 +34,7 @@ export default function StoryMissionSection() {
           {/* Top Right Image */}
           <div className="hidden md:block absolute right-0 -top-3 w-[260px] h-[260px] rounded">
             <Image
-              src="https://placehold.co/260x260"
+              src="/about/2.png"
               alt="Story 1"
               fill
               className="object-cover rounded"
@@ -44,7 +44,7 @@ export default function StoryMissionSection() {
           {/* Bottom Left Image */}
           <div className="hidden md:block absolute left-0 bottom-0 w-[260px] h-[260px] rounded">
             <Image
-              src="https://placehold.co/260x260"
+              src="/about/3.png"
               alt="Story 2"
               fill
               className="object-cover rounded"
@@ -54,7 +54,7 @@ export default function StoryMissionSection() {
           {/* Small Top Left Image */}
           <div className="hidden lg:block absolute left-[65px] top-[118px] w-[158px] h-[158px] rounded-md">
             <Image
-              src="https://placehold.co/158x158"
+              src="/about/4.png"
               alt="Story 3"
               fill
               className="object-cover rounded-md"
@@ -64,7 +64,7 @@ export default function StoryMissionSection() {
           {/* Small Bottom Right Image */}
           <div className="hidden lg:block absolute right-0 bottom-[124px] w-[158px] h-[158px] rounded">
             <Image
-              src="https://placehold.co/158x158"
+              src="/about/5.png"
               alt="Story 4"
               fill
               className="object-cover rounded"
