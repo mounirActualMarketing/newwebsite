@@ -41,7 +41,7 @@ export default function MainNav() {
     {
       label: 'Resources',
       items: [
-        { label: 'Blog', href: '#blog' },
+        { label: 'Blog', href: '/blog' },
         { label: 'FAQs', href: '#faq' },
         { label: 'Downloads', href: '#downloads' },
       ],
