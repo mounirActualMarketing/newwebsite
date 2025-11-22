@@ -92,7 +92,7 @@ export default function CourseDurationSection() {
         <div className="relative w-full md:w-[724px] h-[400px] md:h-auto bg-bg-soft overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="https://placehold.co/905x805"
+              src="/online-corporate/leftsec.png"
               alt="Study Schedule"
               fill
               className="object-cover -ml-24"
