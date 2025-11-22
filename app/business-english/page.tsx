@@ -4,7 +4,7 @@ import HeroSection from '../components/sections/business-english/HeroSection';
 import MethodologySection from '../components/sections/business-english/MethodologySection';
 import StudyPlanSection from '../components/sections/business-english/StudyPlanSection';
 import CTASection from '../components/sections/business-english/CTASection';
-import CentersSection from '../components/sections/business-english/CentersSection';
+import CentersSection from '../components/sections/CentersSection';
 import ContactForm from '../components/sections/ContactForm';
 import Footer from '../components/Footer';
 

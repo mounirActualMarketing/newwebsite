@@ -7,7 +7,7 @@ import ValuesSection from '../components/sections/about-us/ValuesSection';
 import VideoShowcaseSection from '../components/sections/about-us/VideoShowcaseSection';
 import TeamSection from '../components/sections/about-us/TeamSection';
 import ImpactSection from '../components/sections/about-us/ImpactSection';
-import CentersMapSection from '../components/sections/about-us/CentersMapSection';
+import CentersSection from '../components/sections/CentersSection';
 import CultureSection from '../components/sections/about-us/CultureSection';
 import TrustSection from '../components/sections/about-us/TrustSection';
 import Footer from '../components/Footer';
@@ -25,7 +25,7 @@ export default function AboutUsPage() {
         <VideoShowcaseSection />
         <TeamSection />
         <ImpactSection />
-        <CentersMapSection />
+        <CentersSection />
         <CultureSection />
         <TrustSection />
       </main>
