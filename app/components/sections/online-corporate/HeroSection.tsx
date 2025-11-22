@@ -9,7 +9,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="https://placehold.co/1440x800"
+          src="/about/hero.png"
           alt="Corporate English"
           fill
           className="object-cover"
