@@ -5,7 +5,7 @@ export default function HeroSection() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url('/professional-women-in-hijab-working-on-laptops-in-.jpg')`,
+          backgroundImage: `url('/blog/hero.jpg')`,
         }}
       />
       {/* Dark overlay */}
