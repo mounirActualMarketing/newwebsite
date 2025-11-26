@@ -110,40 +110,40 @@ export default function WhatYouLearn() {
             </div>
           </div>
           {/* Right side - Level card */}
-          <div className="bg-white rounded-lg shadow-lg p-6 relative overflow-hidden">
+          <div className="bg-[#123256] rounded-lg shadow-lg p-6 relative overflow-hidden">
             {/* Large watermark */}
-            <div className="absolute top-0 right-0 text-[120px] font-bold text-gray-100 leading-none -mr-4 -mt-4 select-none">
+            <div className="absolute top-0 right-0 text-[120px] font-bold text-white/10 leading-none -mr-4 -mt-4 select-none">
               {activeLevel}
             </div>
             <div className="relative z-10">
-              <h3 className="text-2xl font-bold text-gray-900 mb-1">{currentData.level}</h3>
-              <p className="text-sm text-gray-500 mb-1">{currentData.subtitle}</p>
-              <p className="text-3xl font-bold text-gray-900 mb-6">{currentData.range}</p>
+              <h3 className="text-2xl font-bold text-[#A6D3E1] mb-1">{currentData.level}</h3>
+              <p className="text-sm text-white/70 mb-1">{currentData.subtitle}</p>
+              <p className="text-3xl font-bold text-white mb-6">{currentData.range}</p>
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div>
-                  <h4 className="font-semibold text-gray-900 text-sm mb-2">To Listen</h4>
-                  <p className="text-xs text-gray-600 leading-relaxed">{currentData.skills.listen}</p>
+                  <h4 className="font-semibold text-white text-sm mb-2">To Listen</h4>
+                  <p className="text-xs text-white/80 leading-relaxed">{currentData.skills.listen}</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 text-sm mb-2">To Talk</h4>
-                  <p className="text-xs text-gray-600 leading-relaxed">{currentData.skills.talk}</p>
+                  <h4 className="font-semibold text-white text-sm mb-2">To Talk</h4>
+                  <p className="text-xs text-white/80 leading-relaxed">{currentData.skills.talk}</p>
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div>
-                  <h4 className="font-semibold text-gray-900 text-sm mb-2">Reading</h4>
-                  <p className="text-xs text-gray-600 leading-relaxed">{currentData.skills.reading}</p>
+                  <h4 className="font-semibold text-white text-sm mb-2">Reading</h4>
+                  <p className="text-xs text-white/80 leading-relaxed">{currentData.skills.reading}</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 text-sm mb-2">Writing</h4>
-                  <p className="text-xs text-gray-600 leading-relaxed">{currentData.skills.writing}</p>
+                  <h4 className="font-semibold text-white text-sm mb-2">Writing</h4>
+                  <p className="text-xs text-white/80 leading-relaxed">{currentData.skills.writing}</p>
                 </div>
               </div>
-              <div className="border-t border-gray-200 pt-4">
-                <h4 className="font-semibold text-gray-900 text-sm mb-2">Examples</h4>
-                <p className="text-xs text-gray-600 leading-relaxed">{currentData.examples}</p>
+              <div className="border-t border-white/20 pt-4">
+                <h4 className="font-semibold text-white text-sm mb-2">Examples</h4>
+                <p className="text-xs text-white/80 leading-relaxed">{currentData.examples}</p>
               </div>
-              <button className="mt-4 text-sm font-semibold text-gray-900 hover:text-[#0d4f5f]">Read More</button>
+              <button className="mt-4 text-sm font-semibold text-white hover:text-[#A6D3E1] transition-colors">Read More</button>
             </div>
           </div>
         </div>
