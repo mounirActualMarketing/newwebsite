@@ -20,16 +20,16 @@ export default function MainNav() {
     label: 'English Courses',
     items: [
       { label: 'Adult English', href: '#courses' },
-      { label: 'Business English', href: '/business-english' },
+      { label: 'Business English', href: '#courses' },
       { label: 'IELTS Preparation', href: '#courses' },
       { label: 'English for Teens', href: '/english-teens' },
       { label: 'Online Courses', href: '/online-courses' },
     ],
   },
-  {
-    label: 'Corporate',
-    href: '/online-corporate',
-  },
+    {
+      label: 'Corporate',
+      href: '#corporate',
+    },
     {
       label: 'Centers',
       href: '/centers',
@@ -41,7 +41,7 @@ export default function MainNav() {
     {
       label: 'Resources',
       items: [
-        { label: 'Blog', href: '/blog' },
+        { label: 'Blog', href: '#blog' },
         { label: 'FAQs', href: '#faq' },
         { label: 'Downloads', href: '#downloads' },
       ],
