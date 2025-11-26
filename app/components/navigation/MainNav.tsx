@@ -43,7 +43,7 @@ export default function MainNav() {
     },
     {
       label: 'Corporate',
-      href: '#corporate',
+      href: '/corporate',
     },
     {
       label: 'Centers',
