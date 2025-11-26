@@ -100,8 +100,8 @@ export default function WhatYouLearn() {
                   onClick={() => setActiveLevel(level as keyof typeof levelData)}
                   className={`w-12 h-12 rounded-full flex items-center justify-center font-semibold text-sm transition-colors ${
                     activeLevel === level
-                      ? 'bg-[#0d4f5f] text-white'
-                      : 'bg-white border-2 border-gray-300 text-gray-700 hover:border-[#0d4f5f]'
+                      ? 'bg-[#F12B3E] text-white'
+                      : 'bg-white border-2 border-gray-300 text-gray-700 hover:border-[#F12B3E]'
                   }`}
                 >
                   {level}
