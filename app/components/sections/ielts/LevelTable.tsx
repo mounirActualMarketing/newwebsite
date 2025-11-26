@@ -41,7 +41,7 @@ export default function LevelTable() {
               {headers.map((header, index) => (
                 <th
                   key={index}
-                  className="p-3 text-center bg-[#0d4f5f] text-white font-medium text-xs whitespace-pre-line border-l border-[#0a3d4a]"
+                  className="p-3 text-center bg-gray-50 text-gray-700 font-medium text-xs whitespace-pre-line border-l border-gray-200"
                 >
                   {header}
                 </th>
