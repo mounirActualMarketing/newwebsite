@@ -28,3 +28,4 @@ export default function BlogCard({ title, date, image }: BlogCardProps) {
   );
 }
 
+

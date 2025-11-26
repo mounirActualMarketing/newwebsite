@@ -36,7 +36,7 @@ export default function MainNav() {
       items: [
         { label: 'Adult English', href: '#courses' },
         { label: 'Business English', href: '#courses' },
-        { label: 'IELTS Preparation', href: '#courses' },
+        { label: 'IELTS Preparation', href: '/ielts-preparation' },
         { label: 'English for Teens', href: '/english-teens' },
         { label: 'Online Courses', href: '/online-courses' },
       ],
