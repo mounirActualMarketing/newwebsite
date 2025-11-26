@@ -1,16 +1,22 @@
+import Image from 'next/image';
+
 export default function HeroSection() {
   return (
     <section className="relative h-[400px] md:h-[450px] overflow-hidden">
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url('/images/level-20explanations.jpg')`,
-          backgroundPosition: "top center",
-        }}
-      />
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/level-20explanations.jpg"
+          alt="English Language Levels"
+          fill
+          className="object-cover object-top"
+          priority
+        />
+      </div>
+
       {/* Blue overlay */}
       <div className="absolute inset-0 bg-[#0d4f5f]/85" />
+      
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4 max-w-4xl mx-auto">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-balance">
