@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Button from '../../ui/Button';
 
 export default function EnglishTestSection() {
@@ -13,16 +14,12 @@ export default function EnglishTestSection() {
         <div className="relative container mx-auto px-4 md:px-24 h-full flex items-center justify-center">
           <div className="max-w-[1248px] w-full px-6 md:px-12 py-14 rounded-lg flex flex-col items-center gap-6 text-center">
             {/* Icon */}
-            <div className="w-[106px] h-[106px] bg-[#F56C79] rounded-full flex items-center justify-center">
-              <div className="w-[59px] h-[59px] relative">
-                <svg width="59" height="59" viewBox="0 0 59 59" fill="none">
-                  <path d="M13.95 0h31.11v37.88H13.95z" fill="white" />
-                  <path d="M0 17.29h59v41.71H0z" fill="white" />
-                  <path d="M7.03 10.37h20.74v40H7.03z" fill="white" />
-                  <path d="M31.23 10.37h20.74v40H31.23z" fill="white" />
-                </svg>
-              </div>
-            </div>
+            <Image
+              src="/online-corporate/Frame 250.png"
+              alt="English Test Icon"
+              width={106}
+              height={106}
+            />
 
             {/* Text Content */}
             <div className="flex flex-col items-center gap-2 max-w-[462px]">

@@ -9,7 +9,7 @@ import CoursePlanSection from '../components/sections/english-teens/CoursePlanSe
 import ContactForm from '../components/sections/ContactForm';
 import Footer from '../components/Footer';
 
-export default function CorporatePage() {
+export default function SuccessStoriesPage() {
   return (
     <div className="min-h-screen w-full overflow-hidden">
       <TopBar />
@@ -27,4 +27,11 @@ export default function CorporatePage() {
     </div>
   );
 }
+
+
+
+
+
+
+
 

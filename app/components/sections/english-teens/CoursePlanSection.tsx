@@ -6,15 +6,15 @@ import Button from '../../ui/Button';
 export default function CoursePlanSection() {
   return (
     <section className="w-full bg-accent-orange-light overflow-hidden">
-      <div className="flex flex-col md:flex-row items-center">
+      <div className="flex flex-col md:flex-row items-stretch">
         {/* Left Image */}
-        <div className="relative w-full md:w-[716px] h-[400px] md:h-[789px] overflow-hidden">
+        <div className="relative w-full md:w-[716px] h-[400px] md:h-auto min-h-[400px] overflow-hidden">
           <div className="absolute inset-0">
             <Image
               src="/online-corporate/leftsec.png"
               alt="Course Planning"
               fill
-              className="object-cover -ml-42"
+              className="object-cover"
             />
           </div>
 

@@ -104,7 +104,7 @@ export default function HowYouStudySection() {
         <div className="hidden md:flex gap-8 mt-20">
           <div className="w-[402px] p-8 bg-white rounded border border-stroke-soft flex flex-col gap-6">
             <div className="w-20 h-20 bg-bg-soft rounded flex items-center justify-center">
-              <div className="w-10 h-10 bg-[#C9EEF7] rounded-full" />
+              <Image src="/online-corporate/Vector.png" alt="Icon" width={40} height={40} />
             </div>
             <div className="flex flex-col gap-1">
               <h4 className="text-text-strong text-xl font-heading font-bold capitalize">
@@ -118,7 +118,7 @@ export default function HowYouStudySection() {
 
           <div className="w-[402px] p-8 bg-white rounded border border-stroke-soft flex flex-col gap-6">
             <div className="w-20 h-20 bg-bg-soft rounded flex items-center justify-center">
-              <div className="w-10 h-10 bg-[#C9EEF7] rounded-full" />
+              <Image src="/online-corporate/Vector.png" alt="Icon" width={40} height={40} />
             </div>
             <div className="flex flex-col gap-1">
               <h4 className="text-text-strong text-xl font-heading font-bold capitalize">
@@ -134,5 +134,10 @@ export default function HowYouStudySection() {
     </section>
   );
 }
+
+
+
+
+
 
 

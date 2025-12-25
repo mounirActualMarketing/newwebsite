@@ -25,7 +25,7 @@ export default function HowYouStudySection() {
           {/* Background Image */}
           <div className="absolute inset-0 -left-9">
             <Image
-              src="https://placehold.co/1104x736"
+              src="/online-corporate/image 24.png"
               alt="English Course"
               fill
               className="object-cover"
@@ -36,7 +36,7 @@ export default function HowYouStudySection() {
           <div className="hidden md:block absolute right-0 top-0 w-[523px]">
             {/* Card 1 - Watch and learn (Orange) */}
             <div className="absolute top-0 right-0 w-full h-[730px] bg-accent-orange-light rounded-tr-3xl p-10 flex flex-col gap-6">
-              <div className="w-18 h-33 bg-accent-orange-dark" />
+              <Image src="/online-corporate/1.png" alt="Step 1" width={72} height={132} />
               <div className="flex flex-col gap-1">
                 <h3 className="text-text-strong text-3xl font-heading font-bold">
                   Watch and learn
@@ -51,7 +51,7 @@ export default function HowYouStudySection() {
 
             {/* Card 2 - Watch and learn (Pink) */}
             <div className="absolute top-24 right-0 w-full h-[631px] bg-[#FFD8D2] rounded-tr-3xl p-10 flex flex-col gap-6">
-              <div className="w-24 h-33 bg-[#FFAA9F]" />
+              <Image src="/online-corporate/2.png" alt="Step 2" width={72} height={132} />
               <div className="flex flex-col gap-1">
                 <h3 className="text-text-strong text-3xl font-heading font-bold">
                   Watch and learn
@@ -66,7 +66,7 @@ export default function HowYouStudySection() {
 
             {/* Card 3 - Constant feedback (Blue) */}
             <div className="absolute top-60 right-0 w-full h-[494px] bg-[#A6D3E1] rounded-tr-3xl p-10 flex flex-col gap-6">
-              <div className="w-24 h-33 bg-[#3FA1BE]" />
+              <Image src="/online-corporate/3.png" alt="Step 3" width={72} height={132} />
               <div className="flex flex-col gap-1">
                 <h3 className="text-text-strong text-3xl font-heading font-bold">
                   Constant feedback
@@ -109,7 +109,7 @@ export default function HowYouStudySection() {
         <div className="hidden md:flex gap-8 mt-20">
           <div className="w-[402px] p-8 bg-white rounded border border-stroke-soft flex flex-col gap-6">
             <div className="w-20 h-20 bg-bg-soft rounded flex items-center justify-center">
-              <div className="w-10 h-10 bg-[#C9EEF7] rounded-full" />
+              <Image src="/online-corporate/Vector.png" alt="Icon" width={40} height={40} />
             </div>
             <div className="flex flex-col gap-1">
               <h4 className="text-text-strong text-xl font-heading font-bold capitalize">
@@ -123,7 +123,7 @@ export default function HowYouStudySection() {
 
           <div className="w-[402px] p-8 bg-white rounded border border-stroke-soft flex flex-col gap-6">
             <div className="w-20 h-20 bg-bg-soft rounded flex items-center justify-center">
-              <div className="w-10 h-10 bg-[#C9EEF7] rounded-full" />
+              <Image src="/online-corporate/Vector.png" alt="Icon" width={40} height={40} />
             </div>
             <div className="flex flex-col gap-1">
               <h4 className="text-text-strong text-xl font-heading font-bold capitalize">

@@ -26,16 +26,16 @@ export default function MainNav() {
     {
       label: 'How You Learn',
       items: [
-        { label: 'Our Method', href: '#methodology' },
-        { label: 'Learning Journey', href: '#journey' },
-        { label: 'Success Stories', href: '#testimonials' },
+        { label: 'Our Method', href: '/our-method' },
+        { label: 'Learning Journey', href: '/learning-journey' },
+        { label: 'Success Stories', href: '/success-stories' },
       ],
     },
     {
       label: 'English Courses',
       items: [
         { label: 'Adult English', href: '#courses' },
-        { label: 'Business English', href: '#courses' },
+        { label: 'Business English', href: '/business-english' },
         { label: 'IELTS Preparation', href: '/ielts-preparation' },
         { label: 'English for Teens', href: '/english-teens' },
         { label: 'Online Courses', href: '/online-courses' },
@@ -63,7 +63,7 @@ export default function MainNav() {
     },
     {
       label: 'Franchise',
-      href: '#franchise',
+      href: '/franchise',
     },
   ];
 

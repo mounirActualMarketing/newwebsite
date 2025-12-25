@@ -27,7 +27,7 @@ export default function CourseDurationSection() {
 
   return (
     <section className="relative w-full bg-white overflow-hidden">
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row md:items-stretch">
         {/* Left Content */}
         <div className="flex-1 px-4 md:px-24 py-16 md:py-28 flex flex-col justify-center gap-14">
           {/* Header */}
@@ -70,7 +70,7 @@ export default function CourseDurationSection() {
                 >
                   {/* Icon */}
                   <div className="w-16 h-16 shrink-0 bg-bg-soft rounded-md flex items-center justify-center">
-                    <div className="w-10 h-10 bg-[#C9EEF7] rounded-full" />
+                    <Image src="/online-corporate/Vector.png" alt="Icon" width={40} height={40} />
                   </div>
 
                   {/* Text */}
@@ -95,17 +95,13 @@ export default function CourseDurationSection() {
               src="/online-corporate/leftsec.png"
               alt="Study Schedule"
               fill
-              className="object-cover -ml-24"
+              className="object-cover"
             />
           </div>
+          {/* Decorative Accent - Bottom Right of Image */}
+          <div className="absolute bottom-0 right-0 w-[466px] h-[34px] bg-[#FF8E7E] rounded-tl-2xl" />
         </div>
       </div>
-
-      {/* Decorative Accent - Bottom Right */}
-      <div 
-        className="absolute bottom-0 right-0 w-[466px] h-[34px] bg-[#FF8E7E] rounded-tl-2xl"
-        style={{ transform: 'rotate(180deg)', transformOrigin: 'top left' }}
-      />
     </section>
   );
 }

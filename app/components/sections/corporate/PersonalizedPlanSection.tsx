@@ -99,7 +99,7 @@ export default function PersonalizedPlanSection() {
                 >
                   {/* Icon */}
                   <div className="w-16 h-16 shrink-0 bg-bg-soft rounded-md flex items-center justify-center">
-                    <div className="w-10 h-10 bg-[#C9EEF7] rounded-full" />
+                    <Image src="/online-corporate/Vector.png" alt="Icon" width={40} height={40} />
                   </div>
 
                   {/* Text */}
@@ -145,5 +145,10 @@ export default function PersonalizedPlanSection() {
     </section>
   );
 }
+
+
+
+
+
 
 
